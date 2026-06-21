@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zappy — Peace of mind, not surveillance</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">Zappy</a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#story">Story</a>
+      <a href="#problem">Problem</a>
+      <a href="#insights">Insights</a>
+      <a href="#solution">Solution</a>
+      <a href="#about">Developer</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-pad">
+      <div class="hero-copy">
+        <p class="eyebrow">Mobility · Presence · Privacy</p>
+        <h1>A trusted housemate that notices things.</h1>
+        <p class="hero-text">
+          Zappy is a privacy-first household awareness robot designed to reduce the mental burden of living alone. It combines mobility, quiet presence, and local AI so your home can notice what matters without becoming a surveillance system.
+        </p>
+        <p class="hero-text">
+          All data stays locally on the robot, and the app lets you control how much Zappy is allowed to know, remember, and act on.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#story">See the story</a>
+          <a class="button secondary" href="#insights">What people said</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-card">
+          <img
+            src="zappy.png"
+            alt="Concept rendering of Zappy home robot"
+            class="hero-image"
+          />
+          <p class="decor-caption">
+            Concept rendering · For illustration purposes only.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="story section-pad">
+      <div class="section-heading">
+        <p class="eyebrow">The story</p>
+        <h2>One person. Three cameras. Still not enough peace of mind.</h2>
+        <p>
+          Inspired by a real response from someone living alone. Their worry wasn't burglars. It was fire, flooding, and the pet waiting at home.
+        </p>
+      </div>
+
+      <div class="demo-cards">
+        <article class="demo-card">
+          <span class="card-number">01</span>
+          <h3>The current solution</h3>
+          <p>
+            A door camera. A living room camera. A camera for the dog's crate. Multiple devices, but still the need to constantly check.
+          </p>
+        </article>
+
+        <article class="demo-card">
+          <span class="card-number">02</span>
+          <h3>Zappy's memory</h3>
+          <p>
+            Zappy knows Sarah is away, Bella is home, and the house should be quiet.
+          </p>
+          <pre>{
+  "resident": "away",
+  "dog": "home",
+  "risk_focus": ["fire", "flooding"],
+  "expected_state": "quiet home"
+}</pre>
+        </article>
+
+        <article class="demo-card">
+          <span class="card-number">03</span>
+          <h3>Calm reassurance</h3>
+          <p class="notification">
+            ✓ Bella resting<br>
+            ✓ No unusual heat<br>
+            ✓ No leaks detected<br>
+            ✓ Home quiet<br><br>
+            Everything looks normal.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="problem" class="problem section-pad">
+      <div class="section-heading">
+        <p class="eyebrow">The problem</p>
+        <h2>Living alone creates small, persistent worries.</h2>
+      </div>
+
+      <div class="problem-grid">
+        <article class="problem-card">
+          <span>🐈</span>
+          <h3>Pets</h3>
+          <p>Is my cat okay while I am away?</p>
+        </article>
+        <article class="problem-card">
+          <span>🔥</span>
+          <h3>Appliances</h3>
+          <p>Did I leave something on?</p>
+        </article>
+        <article class="problem-card">
+          <span>🚰</span>
+          <h3>Water</h3>
+          <p>Did I leave a tap running?</p>
+        </article>
+        <article class="problem-card">
+          <span>⚡</span>
+          <h3>Power</h3>
+          <p>What if the power goes out?</p>
+        </article>
+        <article class="problem-card">
+          <span>🚪</span>
+          <h3>Doors</h3>
+          <p>Did I lock up properly?</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="insights" class="insights section-pad">
+      <div class="insights-copy">
+        <p class="eyebrow">Community discovery</p>
+        <h2>What people living alone told me.</h2>
+        <p>
+          I collected 30+ early responses from people living alone. Their stories were not about wanting more cameras. They were about wanting reassurance.
+        </p>
+      </div>
+
+      <figure class="wordcloud-card">
+        <img src="reddit_wordcloud_home_style.png" alt="Word cloud showing common worries people mentioned about living alone" />
+      </figure>
+
+      <div class="quote-grid">
+        <blockquote>“I just worry about my cat.”</blockquote>
+        <blockquote>“It is the taps I worry about.”</blockquote>
+        <blockquote>“I still ask my neighbour when something happens.”</blockquote>
+      </div>
+    </section>
+
+    <section id="solution" class="solution section-pad">
+      <div class="section-heading">
+        <p class="eyebrow">Zappy to the rescue</p>
+        <h2>Small enough to belong. Smart enough to notice.</h2>
+      </div>
+
+      <div class="solution-grid">
+        <article class="solution-card">
+          <span>👀</span>
+          <h3>Observe</h3>
+          <p>Reads the current state of the home through local sensors and images.</p>
+        </article>
+        <article class="solution-card">
+          <span>🧠</span>
+          <h3>Remember</h3>
+          <p>Keeps track of events like who left, what changed, and when.</p>
+        </article>
+        <article class="solution-card">
+          <span>⚖️</span>
+          <h3>Reason</h3>
+          <p>Compares the current state with what should normally be true.</p>
+        </article>
+        <article class="solution-card">
+          <span>🔔</span>
+          <h3>Notify</h3>
+          <p>Interrupts only when something seems unusual or worth checking.</p>
+        </article>
+        <article class="solution-card">
+          <span>🔒</span>
+          <h3>Stay private</h3>
+          <p>Designed around local AI, transparent memory, and user control.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="tagline section-pad">
+      <p>A home should not feel watched.</p>
+      <h2>It should quietly look after itself.</h2>
+    </section>
+
+    <section id="about" class="about section-pad">
+      <div class="about-card">
+        <div class="about-avatar" aria-hidden="true">SS</div>
+        <div>
+          <p class="eyebrow">Developer</p>
+          <h2>Sushmita Singh</h2>
+          <p>
+            I am a data scientist and machine learning engineer with experience building and deploying AI products in industry. My work spans large language models, anomaly detection, time-series forecasting, and computer vision products. I have worked on production AI applications, benchmarking foundation models, and developing machine learning solutions for industrial data.
+          </p>
+
+          <p>
+            Through research and engineering, I have explored multimodal AI, local inference, retrieval systems, and agentic workflows. Zappy combines many of these interests: embodied AI, memory, multimodal reasoning, and calm technology designed around people rather than surveillance.
+          </p>
+
+          <p>
+            My goal is to build trustworthy AI systems that quietly augment everyday life, giving people peace of mind while keeping them in control of their data.
+          </p>
+          <div class="about-links">
+            <a
+              href="https://github.com/SushmitaSingh96"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/sushmitasingh96/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Zappy — built with curiosity, local AI, and a lot of overthinking.</p>
+  </footer>
+</body>
+</html>
