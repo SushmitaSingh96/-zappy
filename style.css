@@ -170,6 +170,31 @@ blockquote {
   padding: 40px;
 }
 
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.team-card {
+  background: var(--card);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team-card h3 {
+  margin-bottom: 8px;
+}
+
+.team-card p {
+  color: var(--muted);
+}
+
 .about-avatar {
   width: 100px;
   height: 100px;
@@ -180,6 +205,23 @@ blockquote {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+}
+
+.about-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.about-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.about-links a:hover {
+  color: var(--terracotta);
 }
 
 .site-footer {
