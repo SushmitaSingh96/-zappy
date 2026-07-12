@@ -172,7 +172,7 @@ blockquote {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   margin-top: 32px;
 }
@@ -230,11 +230,18 @@ blockquote {
   padding: 60px 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
   .hero,
   .quote-grid,
   .demo-cards,
-  .about-card {
+  .about-card,
+  .team-grid {
     grid-template-columns: 1fr;
   }
 
