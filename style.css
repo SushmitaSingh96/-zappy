@@ -211,6 +211,7 @@ blockquote {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  object-fit: cover;
 }
 
 .about-links {
