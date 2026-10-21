@@ -154,6 +154,65 @@ blockquote {
   grid-template-columns: repeat(3,1fr);
 }
 
+.code-window {
+  margin: 20px 0 0;
+  background: var(--text);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(58,47,42,.18);
+}
+
+.code-window-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: rgba(255,255,255,.06);
+  color: rgba(255,250,244,.55);
+  font: 500 0.75rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .02em;
+}
+
+.code-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.code-dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255,250,244,.2);
+}
+
+.code-dots i:first-child {
+  background: var(--terracotta);
+}
+
+.code-dots i:nth-child(2) {
+  background: #ddb892;
+}
+
+.code-dots i:last-child {
+  background: var(--sage);
+}
+
+.code-window pre {
+  margin: 0;
+  padding: 16px 18px 18px;
+  overflow-x: auto;
+  color: rgba(255,250,244,.75);
+  font: 0.82rem/1.65 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.code-window .k {
+  color: #e8b89a;
+}
+
+.code-window .s {
+  color: #c5d4a8;
+}
+
 blockquote {
   padding: 30px;
   font-size: 1.4rem;
