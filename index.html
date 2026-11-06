@@ -1,283 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zappy — Peace of mind, not surveillance</title>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zappy Robotics: a home robot that keeps your cats company</title>
+  <meta name="description" content="Zappy stays home with your cats, notices what's off and quietly sets it right, so you can travel with peace of mind." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top">Zappy</a>
+  <div class="site-header-bar">
+    <header class="site-header">
+      <span class="brand"><span class="brand-name">Zappy</span><span class="brand-tag">Robotics</span></span>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#story">Your story</a>
+        <a href="#zappy">Meet Zappy</a>
+        <a href="#investors">Investors</a>
+        <a class="nav-cta" href="#reserve">Reserve your Zappy</a>
+      </nav>
+    </header>
+  </div>
 
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="#story">Story</a>
-      <a href="#problem">Problem</a>
-      <a href="#insights">Insights</a>
-      <a href="#solution">Solution</a>
-      <a href="#about">Developer</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero section-pad">
-      <div class="hero-copy">
-        <p class="eyebrow">Mobility · Presence · Privacy</p>
-        <h1>A trusted housemate that notices things.</h1>
-        <p class="hero-text">
-          Zappy is a privacy-first household awareness robot designed to reduce the mental burden of living alone. It combines mobility, quiet presence, and local AI so your home can notice what matters without becoming a surveillance system.
-        </p>
-        <p class="hero-text">
-          All data stays locally on the robot, and the app lets you control how much Zappy is allowed to know, remember, and act on.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#story">See the story</a>
-          <a class="button secondary" href="#insights">What people said</a>
+  <main>
+    <section id="story" class="wrap stories">
+      <div class="story">
+        <div class="section-intro">
+          <span class="eyebrow">01 · While you’re away</span>
+          <div class="ornament" aria-hidden="true"><span></span><span></span></div>
+          <h2>Zappy stays home.</h2>
+          <p class="lede">It keeps your cats company and safe,<br />notices what’s off,<br />and quietly sets it right.<br />So you can travel with peace of mind.</p>
+        </div>
+        <div class="story-media">
+          <div class="arch"><img class="pos-beach" src="images/beach-umbrella.jpg" alt="A woman on a beach under a colourful umbrella, looking out to sea" /></div>
+          <div class="phone phone-left">
+            <div class="phone-screen">
+              <div class="phone-notch" aria-hidden="true"></div>
+              <div class="phone-head"><span class="phone-title">Zappy</span><span class="phone-to">To you</span></div>
+              <ul class="log">
+                <li><span class="log-time">03:14</span><span class="log-body"><span>Luna knocked her water bowl over.</span><strong>Zappy set it upright and asked the sitter to refill it.</strong></span></li>
+                <li><span class="log-time">09:40</span><span class="log-body"><span>The water fountain stopped.</span><strong>Zappy restarted it. Water is flowing again.</strong></span></li>
+                <li><span class="log-time">14:05</span><span class="log-body"><span>Mochi got shut in the bedroom.</span><strong>Zappy found her. The sitter let her out at 15:00.</strong></span></li>
+                <li><span class="log-time">22:30</span><span class="log-body"><span>The heating went off. 16 °C.</span><strong>Zappy told you. It’s back on.</strong></span></li>
+              </ul>
+              <p class="phone-foot">Good night. Luna and Mochi are fed, safe and asleep.</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="hero-image-card">
-          <img
-            src="images/zappy.png"
-            alt="Concept rendering of Zappy home robot"
-            class="hero-image"
-          />
-          <p class="decor-caption">
-            Concept rendering · For illustration purposes only.
-          </p>
+      <div class="story story-mirrored">
+        <div class="story-media">
+          <div class="arch"><img class="pos-warm" src="images/zappy-warm-light.jpg" alt="Zappy, a rounded home robot with glowing ring eyes, in warm light at home" loading="lazy" /></div>
+          <div class="phone phone-right">
+            <div class="phone-screen">
+              <div class="phone-notch" aria-hidden="true"></div>
+              <div class="phone-head"><span class="phone-title">Zappy</span><span class="phone-to">To the sitter</span></div>
+              <ul class="log">
+                <li><span class="log-time">08:20</span><span class="log-body"><span>Mochi ate half her breakfast.</span><strong>Worth a look when you visit.</strong></span></li>
+                <li><span class="log-time">12:10</span><span class="log-body"><span>Litter box: 4 visits since morning.</span><strong>More than usual. Please check on her.</strong></span></li>
+                <li><span class="log-time">19:52</span><span class="log-body"><span>Mochi just finished dinner.</span><strong>Time for her pill.</strong></span></li>
+                <li><span class="log-time">20:05</span><span class="log-body"><span>Sitter: pill given.</span><strong>Thanks. I’ll let Mochi’s family know.</strong></span></li>
+              </ul>
+              <p class="phone-foot">The sitter sees what happened between visits.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-intro">
+          <span class="eyebrow">02 · With your sitter</span>
+          <div class="ornament" aria-hidden="true"><span></span><span></span></div>
+          <h2>A second pair of eyes for your sitter.</h2>
+          <p class="lede">Zappy watches when your cats eat,<br />drink and use the litter box,<br />and tells your sitter<br />what to check and when.</p>
         </div>
       </div>
     </section>
 
-    <section id="story" class="story section-pad">
-      <div class="section-heading">
-        <p class="eyebrow">The story</p>
-        <h2>One person. Three cameras. Still not enough peace of mind.</h2>
-        <p>
-          Inspired by a real response from someone living alone. Their worry wasn't burglars. It was fire, flooding, and the pet waiting at home.
-        </p>
-      </div>
-
-      <div class="demo-cards">
-        <article class="demo-card">
-          <span class="card-number">01</span>
-          <h3>The current solution</h3>
-          <p>
-            A door camera. A living room camera. A camera for the dog's crate. Multiple devices, but still the need to constantly check.
-          </p>
-        </article>
-
-        <article class="demo-card">
-          <span class="card-number">02</span>
-          <h3>Zappy's memory</h3>
-          <p>
-            Zappy knows Sarah is away, Bella is home, and the house should be quiet.
-          </p>
-          <figure class="code-window">
-            <figcaption class="code-window-bar">
-              <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              zappy · memory.json
-            </figcaption>
-            <pre><code>{
-  <span class="k">"resident"</span>: <span class="s">"away"</span>,
-  <span class="k">"pet"</span>: <span class="s">"home"</span>,
-  <span class="k">"risk_focus"</span>: [<span class="s">"fire"</span>, <span class="s">"flooding"</span>],
-  <span class="k">"expected_state"</span>: <span class="s">"quiet home"</span>
-}</code></pre>
-          </figure>
-        </article>
-
-        <article class="demo-card">
-          <span class="card-number">03</span>
-          <h3>Calm reassurance</h3>
-          <p class="notification">
-            ✓ Bella resting<br>
-            ✓ No unusual heat<br>
-            ✓ No leaks detected<br>
-            ✓ Home quiet<br><br>
-            Everything looks normal.
-          </p>
-        </article>
+    <section id="zappy" class="wrap meet">
+      <div class="meet-grid">
+        <div class="section-intro">
+          <span class="eyebrow">03 · Meet Zappy</span>
+          <div class="ornament" aria-hidden="true"><span></span><span></span></div>
+          <h2>Zappy is home.</h2>
+          <div class="traits">
+            <div class="trait"><span class="trait-title">It notices.</span><span class="trait-text">A tipped bowl, a cat that hasn’t eaten, a room that’s too cold.</span></div>
+            <div class="trait"><span class="trait-title">It acts.</span><span class="trait-text">It sets small things right, or calls your sitter.</span></div>
+            <div class="trait"><span class="trait-title">It keeps you updated.</span><span class="trait-text">As often as you like. And always when it matters.</span></div>
+          </div>
+        </div>
+        <div class="arch"><img class="pos-window" src="images/zappy-window.jpg" alt="Zappy sitting by a sunlit window" loading="lazy" /></div>
       </div>
     </section>
 
-    <section id="problem" class="problem section-pad">
-      <div class="section-heading">
-        <p class="eyebrow">The problem</p>
-        <h2>Living alone creates small, persistent worries.</h2>
-      </div>
+    <section id="reserve" class="reserve">
+      <svg class="reserve-sprig" aria-hidden="true" width="260" height="364" viewBox="0 0 100 140" fill="none" stroke="#5E7A66" stroke-width="1.2" stroke-linecap="round"><path d="M50 138 C50 100 48 70 52 10"></path><path d="M51 40 C30 30 14 36 8 50 C24 58 40 54 51 44"></path><path d="M51 62 C72 50 88 56 94 70 C78 80 62 76 51 66"></path><path d="M50 88 C32 80 16 86 10 100 C26 108 40 104 50 94"></path><path d="M52 18 C62 8 74 8 80 14 C72 24 62 26 52 22"></path><path d="M30 44 L44 47 M74 64 L62 66 M28 95 L42 96"></path></svg>
+      <div class="wrap reserve-grid">
+        <div class="section-intro">
+          <span class="eyebrow eyebrow-on-dark">04 · Reserve your Zappy</span>
+          <h2>Be one of our founding households.</h2>
+          <p class="reserve-text">Tell us about your cat. A founder writes back to you personally. Founding households get Zappy at home first, set up by us, and help shape what it becomes. Our first homes are in Germany.</p>
+        </div>
 
-      <div class="problem-grid">
-        <article class="problem-card">
-          <span>🐈</span>
-          <h3>Pets</h3>
-          <p>Is my cat okay while I am away?</p>
-        </article>
-        <article class="problem-card">
-          <span>🔥</span>
-          <h3>Appliances</h3>
-          <p>Did I leave something on?</p>
-        </article>
-        <article class="problem-card">
-          <span>🚰</span>
-          <h3>Water</h3>
-          <p>Did I leave a tap running?</p>
-        </article>
-        <article class="problem-card">
-          <span>⚡</span>
-          <h3>Power</h3>
-          <p>What if the power goes out?</p>
-        </article>
-        <article class="problem-card">
-          <span>🚪</span>
-          <h3>Doors</h3>
-          <p>Did I lock up properly?</p>
-        </article>
-      </div>
-    </section>
+        <div>
+          <form class="reserve-form" id="reserve-form" novalidate>
+            <div class="field-pair">
+              <label class="field">First name<input name="first_name" type="text" autocomplete="given-name" maxlength="200" required /></label>
+              <label class="field">Last name<input name="last_name" type="text" autocomplete="family-name" maxlength="200" required /></label>
+            </div>
+            <label class="field">Your email<input name="email" type="email" autocomplete="email" maxlength="320" required /></label>
+            <label class="field">Your cat’s name<input name="cat_name" type="text" autocomplete="off" maxlength="200" required /></label>
 
-    <section id="insights" class="insights section-pad">
-      <div class="insights-copy">
-        <p class="eyebrow">Community discovery</p>
-        <h2>What people living alone told me.</h2>
-        <p>
-          I collected 30+ early responses from people living alone. Their stories were not about wanting more cameras. They were about wanting reassurance.
-        </p>
-      </div>
+            <label class="photo-field">
+              <span class="photo-icon">
+                <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F4F0E6" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="3"></rect><circle cx="12" cy="13" r="3.5"></circle><path d="M9 6l1.5-2h3L15 6"></path></svg>
+              </span>
+              <span class="photo-copy">
+                <span class="photo-title" id="photo-title">Add a photo of your cat</span>
+                <span class="photo-hint">Optional. We’d love to meet them.</span>
+              </span>
+              <input id="photo-input" class="visually-hidden" type="file" accept="image/*" />
+            </label>
 
-      <figure class="wordcloud-card">
-        <img src="images/reddit_wordcloud_home_style.png" alt="Word cloud showing common worries people mentioned about living alone" />
-      </figure>
+            <label class="field">Where do you live? (city and postcode)<input name="location" type="text" autocomplete="off" maxlength="200" required /></label>
 
-      <div class="quote-grid">
-        <blockquote>“I just worry about my cat.”</blockquote>
-        <blockquote>“It is the taps I worry about.”</blockquote>
-        <blockquote>“I still ask my neighbour when something happens.”</blockquote>
+            <label class="check"><input name="sitter_ok" type="checkbox" value="yes" /><span>My sitter would be happy to hear from you (optional)</span></label>
+            <label class="check"><input name="would_pay" type="checkbox" value="€19 a week" /><span>I’d pay €19 a week for this while I travel (optional, nothing is charged)</span></label>
+            <label class="check"><input name="consent" type="checkbox" value="yes" required /><span>I agree that Zappy Robotics may store my details to contact me about the founding households programme. I can withdraw at any time. See our <a href="legal.html#privacy">privacy policy</a>.</span></label>
+
+            <!-- Hidden from people. Bots fill it in, and the sign-up script ignores those entries. -->
+            <div class="visually-hidden" aria-hidden="true">
+              <label>Website<input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
+            </div>
+
+            <p class="form-status" id="form-status" role="status"></p>
+            <button class="submit-button" type="submit">Reserve your Zappy</button>
+          </form>
+
+          <div class="form-thanks" id="form-thanks" tabindex="-1" hidden>
+            <h3>Thank you.</h3>
+            <p>A founder will write back to you personally.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="solution" class="solution section-pad">
-      <div class="section-heading">
-        <p class="eyebrow">Zappy to the rescue</p>
-        <h2>Small enough to belong. Smart enough to notice.</h2>
-      </div>
-
-      <div class="solution-grid">
-        <article class="solution-card">
-          <span>👀</span>
-          <h3>Observe</h3>
-          <p>Reads the current state of the home through local sensors and images.</p>
-        </article>
-        <article class="solution-card">
-          <span>🧠</span>
-          <h3>Remember</h3>
-          <p>Keeps track of events like who left, what changed, and when.</p>
-        </article>
-        <article class="solution-card">
-          <span>⚖️</span>
-          <h3>Reason</h3>
-          <p>Compares the current state with what should normally be true.</p>
-        </article>
-        <article class="solution-card">
-          <span>🔔</span>
-          <h3>Notify</h3>
-          <p>Interrupts only when something seems unusual or worth checking.</p>
-        </article>
-        <article class="solution-card">
-          <span>🔒</span>
-          <h3>Stay private</h3>
-          <p>Designed around local AI, transparent memory, and user control.</p>
-        </article>
+    <section id="investors" class="wrap founders">
+      <div class="founders-grid">
+        <div class="section-intro">
+          <span class="eyebrow">05 · A note from the founders</span>
+          <div class="ornament" aria-hidden="true"><span></span><span></span></div>
+          <p class="founders-quote">Home isn’t the walls. It’s who’s waiting inside. We’re building Zappy to keep your furry family company until you’re back.</p>
+          <p class="founders-sign">Team Zappy</p>
+          <p class="meta-line">Incubated at TUM.ai E-Lab 6.0 · Munich, Germany</p>
+        </div>
+        <div class="founders-contact">
+          <p>Investors, partners, curious minds: we’d love to talk.</p>
+          <div class="founders-action"><a class="pill-link" href="mailto:founders@zappy-robotics.com">founders@zappy-robotics.com</a></div>
+        </div>
       </div>
     </section>
 
-    <section id="teaser" class="teaser section-pad">
-      <div class="teaser-copy">
-        <p class="eyebrow">See it in action</p>
-        <h2>A first look at Zappy</h2>
-        <p>
-          A short teaser of how Zappy moves through the home, checks on what matters, and stays quiet until something needs your attention.
-        </p>
-        <ul class="teaser-points">
-          <li>Moves around the home on its own</li>
-          <li>Notices pets, leaks, heat, and open doors</li>
-          <li>Runs its AI locally, on the robot</li>
-        </ul>
-      </div>
-      <div class="video-card">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/nhKsgbYsPTc"
-          title="Zappy teaser video"
-          loading="lazy"
-          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </section>
-
-    <section class="tagline section-pad">
-      <p>A home should not feel watched.</p>
-      <h2>It should quietly look after itself.</h2>
-    </section>
-
-    <section id="about" class="about section-pad">
-      <div class="section-heading">
-        <p class="eyebrow">Team</p>
+    <section id="team" class="wrap team">
+      <div class="section-intro team-intro">
+        <span class="eyebrow">06 · Team</span>
+        <div class="ornament" aria-hidden="true"><span></span><span></span></div>
         <h2>The people behind Zappy</h2>
-        <p>
-          Zappy is shaped by a multidisciplinary team combining robotics, software development, and applied AI.
-        </p>
       </div>
-
       <div class="team-grid">
-        <article class="team-card">
-          <img class="about-avatar" src="images/SushDP.jpg" alt="" />
-          <div>
-            <p class="eyebrow">Co-founder & Product Lead</p>
-            <h3>Sushmita Singh</h3>
-            <p>
-              Sushmita is a data scientist and machine learning engineer who has built and shipped AI products in industry, specializing in large language models, computer vision, and anomaly detection.
-            </p>
-            <p>
-              At Zappy she leads product strategy, user research, and business development, translating customer insight into the product roadmap and the company's direction. Her focus is building trustworthy AI that gives people peace of mind while keeping them in control of their data.
-            </p>
-            <div class="about-links">
-              <a
-                href="https://github.com/SushmitaSingh96"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/sushmitasingh96/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn
-              </a>
+        <article class="person">
+          <div class="avatar" aria-hidden="true">SS</div>
+          <div class="person-body">
+            <h3 class="person-name">Sushmita Singh</h3>
+            <span class="person-role">Co-founder · Product Lead</span>
+            <p>Sushmita is a data scientist and machine learning engineer who has built and shipped AI products in industry, specializing in large language models, computer vision and anomaly detection.</p>
+            <p>At Zappy she leads product strategy, user research and business development, turning customer insight into the product roadmap. Her focus is trustworthy AI that gives people peace of mind while keeping them in control of their data.</p>
+            <div class="person-links">
+              <a href="https://www.linkedin.com/in/sushmitasingh96/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://github.com/SushmitaSingh96" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </div>
         </article>
-
-        <article class="team-card">
-          <img class="about-avatar" src="images/SamanDP.jpeg" alt="" />
-          <div>
-            <p class="eyebrow">Co-founder & Embodied AI Lead</p>
-            <h3>Saman Mahdian</h3>
-            <p>
-              Saman is an embodied AI engineer specializing in Vision-Language-Action (VLA) models, the kind of AI that lets a robot perceive its surroundings, understand what is asked of it, and act. His expertise spans the full robot learning pipeline, from simulation and data collection to imitation learning and deployment on real hardware.
-            </p>
-            <p>
-              At Zappy he brings the robotics, AI, and software together, turning research ideas into a robot that can work reliably in a real home.
-            </p>
-            <div class="about-links">
+        <article class="person">
+          <div class="avatar" aria-hidden="true">SM</div>
+          <div class="person-body">
+            <h3 class="person-name">Saman Mahdian</h3>
+            <span class="person-role">Co-founder · Embodied AI Lead</span>
+            <p>Saman is an embodied AI engineer specializing in Vision-Language-Action (VLA) models, the kind of AI that lets a robot perceive its surroundings, understand what is asked of it, and act. His expertise spans the full robot learning pipeline, from simulation and data collection to imitation learning and deployment on real hardware.</p>
+            <p>At Zappy he brings the robotics, AI and software together, turning research ideas into a robot that works reliably in a real home.</p>
+            <div class="person-links">
               <a href="https://www.linkedin.com/in/saman-mahdian/" target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
           </div>
@@ -287,7 +197,10 @@
   </main>
 
   <footer class="site-footer">
-    <p>Zappy — built with curiosity, local AI, and a lot of overthinking.</p>
+    <span class="footer-links"><span>Zappy Robotics · Germany</span><a href="legal.html#privacy">Privacy policy</a><a href="legal.html#imprint">Impressum</a></span>
+    <span>Images of Zappy are concept renderings. Beach photo: Colin Sabatier on Unsplash.</span>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

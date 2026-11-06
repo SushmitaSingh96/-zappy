@@ -1,73 +1,82 @@
+// Reservations post to a Google Apps Script, which adds a row to a Google Sheet
+// and saves any cat photo to a private Google Drive folder.
+// Paste the web app URL from the setup in tools/pilot-signup.gs here.
+const SIGNUP_URL = "";
 
+const MAX_PHOTO_SIZE = 1200;
+const CONTACT_EMAIL = "founders@zappy-robotics.com";
 
-// Smooth fade-in animation
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  {
-    threshold: 0.15,
+const form = document.getElementById("reserve-form");
+const statusLine = document.getElementById("form-status");
+const submitButton = form.querySelector('button[type="submit"]');
+const thanks = document.getElementById("form-thanks");
+const photoInput = document.getElementById("photo-input");
+const photoTitle = document.getElementById("photo-title");
+const photoTitleDefault = photoTitle.textContent;
+
+let photoData = "";
+
+// Shrinks the photo in the browser so it uploads quickly, whatever its original size.
+async function readPhoto(file) {
+  const bitmap = await createImageBitmap(file);
+  const scale = Math.min(1, MAX_PHOTO_SIZE / Math.max(bitmap.width, bitmap.height));
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.round(bitmap.width * scale);
+  canvas.height = Math.round(bitmap.height * scale);
+  canvas.getContext("2d").drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  bitmap.close();
+  return canvas.toDataURL("image/jpeg", 0.8).split(",")[1];
+}
+
+photoInput.addEventListener("change", async () => {
+  const file = photoInput.files[0];
+  photoData = "";
+  statusLine.textContent = "";
+  photoTitle.textContent = photoTitleDefault;
+  if (!file) return;
+
+  try {
+    photoData = await readPhoto(file);
+    photoTitle.textContent = file.name;
+  } catch {
+    photoInput.value = "";
+    statusLine.textContent = "We couldn’t read that photo. Please try a JPG or PNG, or send it when we write back.";
   }
-);
-
-document
-  .querySelectorAll(
-    ".hero-copy, .hero-visual, .section-heading, .demo-card, .problem-card, .wordcloud-card, .solution-card, .about-card, blockquote"
-  )
-  .forEach((el) => observer.observe(el));
-
-// Active navbar link while scrolling
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".site-nav a");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 120;
-
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
-  });
 });
 
-// Smooth scrolling for navigation
-navLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  form.classList.add("submitted");
+  statusLine.textContent = "";
 
-    const targetId = link.getAttribute("href");
-    const target = document.querySelector(targetId);
+  if (!form.checkValidity()) {
+    statusLine.textContent = "Please fill in the highlighted fields and tick the consent box.";
+    form.querySelector(":invalid").focus();
+    return;
+  }
 
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  });
-});
+  if (!SIGNUP_URL) {
+    statusLine.textContent = `Online reservations open soon. Until then, please email us at ${CONTACT_EMAIL}.`;
+    return;
+  }
 
-// Subtle parallax effect for hero card
-const heroVisual = document.querySelector(".hero-visual");
+  const buttonLabel = submitButton.textContent;
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending…";
 
-window.addEventListener("mousemove", (e) => {
-  if (!heroVisual) return;
+  const body = new URLSearchParams(new FormData(form));
+  if (photoData) body.set("photo", photoData);
 
-  const x = (window.innerWidth / 2 - e.clientX) / 80;
-  const y = (window.innerHeight / 2 - e.clientY) / 80;
-
-  heroVisual.style.transform = `translate(${x}px, ${y}px)`;
+  try {
+    // Apps Script doesn't send CORS headers we can rely on, so the response is opaque.
+    // A network error still throws, which is the failure we can detect.
+    await fetch(SIGNUP_URL, { method: "POST", mode: "no-cors", body });
+    form.hidden = true;
+    thanks.hidden = false;
+    thanks.focus();
+  } catch {
+    statusLine.textContent = `Something went wrong. Please check your connection and try again, or email us at ${CONTACT_EMAIL}.`;
+    submitButton.disabled = false;
+    submitButton.textContent = buttonLabel;
+  }
 });
