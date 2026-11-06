@@ -612,6 +612,17 @@ section[id] { scroll-margin-top: 96px; }
   color: var(--ink-soft);
 }
 
+.legal h3 {
+  margin: 40px 0 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.legal strong { font-weight: 500; color: var(--forest); }
+
+.legal .legal-date { margin: 16px 0 0; font-size: 13px; color: var(--ink-muted); }
+
 .brand-link { text-decoration: none; }
 
 /* Tablet: one column, phone mockups stay overlapping the images */
