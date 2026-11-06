@@ -101,45 +101,16 @@
           <p class="reserve-text">Tell us about your cat. A founder writes back to you personally. Founding households get Zappy at home first, set up by us, and help shape what it becomes. Our first homes are in Germany.</p>
         </div>
 
-        <div>
-          <form class="reserve-form" id="reserve-form" novalidate>
-            <div class="field-pair">
-              <label class="field">First name<input name="first_name" type="text" autocomplete="given-name" maxlength="200" required /></label>
-              <label class="field">Last name<input name="last_name" type="text" autocomplete="family-name" maxlength="200" required /></label>
-            </div>
-            <label class="field">Your email<input name="email" type="email" autocomplete="email" maxlength="320" required /></label>
-            <label class="field">Your cat’s name<input name="cat_name" type="text" autocomplete="off" maxlength="200" required /></label>
-
-            <label class="photo-field">
-              <span class="photo-icon">
-                <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F4F0E6" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="3"></rect><circle cx="12" cy="13" r="3.5"></circle><path d="M9 6l1.5-2h3L15 6"></path></svg>
-              </span>
-              <span class="photo-copy">
-                <span class="photo-title" id="photo-title">Add a photo of your cat</span>
-                <span class="photo-hint">Optional. We’d love to meet them.</span>
-              </span>
-              <input id="photo-input" class="visually-hidden" type="file" accept="image/*" />
-            </label>
-
-            <label class="field">Where do you live? (city and postcode)<input name="location" type="text" autocomplete="off" maxlength="200" required /></label>
-
-            <label class="check"><input name="sitter_ok" type="checkbox" value="yes" /><span>My sitter would be happy to hear from you (optional)</span></label>
-            <label class="check"><input name="would_pay" type="checkbox" value="€19 a week" /><span>I’d pay €19 a week for this while I travel (optional, nothing is charged)</span></label>
-            <label class="check"><input name="consent" type="checkbox" value="yes" required /><span>I agree that Zappy Robotics may store my details to contact me about the founding households programme. I can withdraw at any time. See our <a href="legal.html#privacy">privacy policy</a>.</span></label>
-
-            <!-- Hidden from people. Bots fill it in, and the sign-up script ignores those entries. -->
-            <div class="visually-hidden" aria-hidden="true">
-              <label>Website<input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
-            </div>
-
-            <p class="form-status" id="form-status" role="status"></p>
-            <button class="submit-button" type="submit">Reserve your Zappy</button>
-          </form>
-
-          <div class="form-thanks" id="form-thanks" tabindex="-1" hidden>
-            <h3>Thank you.</h3>
-            <p>A founder will write back to you personally.</p>
-          </div>
+        <div class="reserve-panel">
+          <iframe
+            data-tally-src="https://tally.so/embed/zENrPR?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            title="Reserve your Zappy"
+            loading="lazy"
+            width="100%"
+            height="900"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"></iframe>
         </div>
       </div>
     </section>
