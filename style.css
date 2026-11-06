@@ -326,6 +326,13 @@ section[id] { scroll-margin-top: 96px; }
 
 .reserve-panel iframe { display: block; border: 0; }
 
+.reserve-privacy {
+  margin: 12px 0 0 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--sage-pale);
+}
+
 /* Founders' note */
 .founders { padding-top: 140px; }
 
