@@ -547,15 +547,12 @@ section[id] { scroll-margin-top: 96px; }
 }
 
 .avatar {
+  display: block;
   width: 88px;
   height: 88px;
   border-radius: 50%;
   background: var(--avatar-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--serif);
-  font-size: 28px;
+  object-fit: cover;
 }
 
 .person-body { display: flex; flex-direction: column; gap: 12px; }
