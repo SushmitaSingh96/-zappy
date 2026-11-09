@@ -18,8 +18,25 @@ function loadTallyForm() {
   });
 }
 
-const tallyScript = document.createElement("script");
-tallyScript.src = TALLY_SCRIPT;
-tallyScript.onload = loadTallyForm;
-tallyScript.onerror = loadTallyForm;
-document.body.appendChild(tallyScript);
+function startTally() {
+  const tallyScript = document.createElement("script");
+  tallyScript.src = TALLY_SCRIPT;
+  tallyScript.onload = loadTallyForm;
+  tallyScript.onerror = loadTallyForm;
+  document.body.appendChild(tallyScript);
+}
+
+// Only load the form when the visitor scrolls near it, so Tally's
+// "visits" count people who actually reached the form.
+const reservePanel = document.querySelector(".reserve-panel");
+if ("IntersectionObserver" in window && reservePanel) {
+  const observer = new IntersectionObserver((entries) => {
+    if (entries.some((entry) => entry.isIntersecting)) {
+      observer.disconnect();
+      startTally();
+    }
+  }, { rootMargin: "300px 0px" });
+  observer.observe(reservePanel);
+} else {
+  startTally();
+}
