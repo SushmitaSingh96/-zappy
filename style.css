@@ -16,7 +16,6 @@
   --ink-muted: #6A6A64;
   --ink-faint: #8A877F;
   --image-bg: #E4E0D4;
-  --avatar-bg: #DCD8CC;
 
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: Inter, system-ui, sans-serif;
@@ -394,64 +393,6 @@ section[id] { scroll-margin-top: 96px; }
 
 .pill-link:hover { background: var(--forest-hover); border-color: var(--forest-hover); }
 
-/* Team */
-.team { padding-top: 140px; }
-.team-intro { margin-bottom: 48px; }
-
-.team-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  border-top: 1px solid var(--forest);
-  padding-top: 40px;
-}
-
-.person {
-  display: grid;
-  grid-template-columns: 88px 1fr;
-  gap: 24px;
-}
-
-.avatar {
-  display: block;
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  background: var(--avatar-bg);
-  object-fit: cover;
-}
-
-.person-body { display: flex; flex-direction: column; gap: 12px; }
-
-.person-name {
-  margin: 0;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: 30px;
-}
-
-.person-role {
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--copper);
-}
-
-.person-body p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--ink-soft);
-}
-
-.person-links { display: flex; gap: 20px; }
-
-.person-links a {
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 /* Footer */
 .site-footer {
   max-width: 1360px;
@@ -498,8 +439,7 @@ section[id] { scroll-margin-top: 96px; }
   .story,
   .meet-grid,
   .reserve-grid,
-  .founders-grid,
-  .team-grid {
+  .founders-grid {
     grid-template-columns: 1fr;
   }
 
@@ -519,7 +459,7 @@ section[id] { scroll-margin-top: 96px; }
   .founders-action { padding-top: 8px; }
   .meet { padding-top: 112px; }
   .reserve { margin-top: 112px; padding: 72px 0; }
-  .founders, .team { padding-top: 96px; }
+  .founders { padding-top: 96px; }
   .site-footer { padding-top: 80px; }
   .reserve-sprig { display: none; }
 }
@@ -570,5 +510,4 @@ section[id] { scroll-margin-top: 96px; }
 }
 
 @media (max-width: 420px) {
-  .person { grid-template-columns: 1fr; gap: 16px; }
 }
