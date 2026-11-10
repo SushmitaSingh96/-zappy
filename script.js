@@ -8,6 +8,11 @@ document.querySelectorAll("iframe[data-tally-src]").forEach((frame) => {
   frame.dataset.tallySrc += "&src=" + encodeURIComponent(visitSource);
 });
 
+// Keeps ?src= (and any other query) when switching between EN and DE.
+document.querySelectorAll(".lang-switch a").forEach((link) => {
+  link.href = link.getAttribute("href") + location.search;
+});
+
 function loadTallyForm() {
   if (typeof Tally !== "undefined") {
     Tally.loadEmbeds();
@@ -69,11 +74,15 @@ function showConsentBar() {
   bar.className = "consent-bar";
   bar.setAttribute("role", "region");
   bar.setAttribute("aria-label", "Cookie choice");
+  const text = document.documentElement.lang === "de"
+    ? { ask: "Dürfen wir ein Meta-Cookie nutzen, um zu sehen, über welche Anzeige du zu uns gekommen bist?",
+        privacy: "Datenschutz", no: "Nein danke", yes: "Erlauben" }
+    : { ask: "May we use a Meta cookie to see which of our ads brought you here?",
+        privacy: "Privacy policy", no: "No thanks", yes: "Allow" };
   bar.innerHTML =
-    '<p>May we use a Meta cookie to see which of our ads brought you here? ' +
-    '<a href="legal.html#privacy">Privacy policy</a></p>' +
-    '<div class="consent-actions"><button type="button" data-choice="no">No thanks</button>' +
-    '<button type="button" data-choice="yes" class="consent-yes">Allow</button></div>';
+    '<p>' + text.ask + ' <a href="legal.html#privacy">' + text.privacy + '</a></p>' +
+    '<div class="consent-actions"><button type="button" data-choice="no">' + text.no + '</button>' +
+    '<button type="button" data-choice="yes" class="consent-yes">' + text.yes + '</button></div>';
   bar.addEventListener("click", (event) => {
     const choice = event.target.getAttribute("data-choice");
     if (!choice) return;
