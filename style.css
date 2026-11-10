@@ -511,3 +511,20 @@ section[id] { scroll-margin-top: 96px; }
 
 @media (max-width: 420px) {
 }
+
+/* Meta cookie choice */
+.consent-bar {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 50;
+  max-width: 560px; margin: 0 auto; padding: 16px 20px;
+  display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  background: var(--forest); color: var(--cream); border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2); font-size: 14px; line-height: 1.45;
+}
+.consent-bar p { margin: 0; flex: 1 1 260px; }
+.consent-bar a { color: var(--cream); }
+.consent-actions { display: flex; gap: 8px; }
+.consent-bar button {
+  font: inherit; cursor: pointer; padding: 8px 16px; border-radius: 999px;
+  border: 1px solid var(--sage-light); background: transparent; color: var(--cream);
+}
+.consent-bar .consent-yes { background: var(--cream); color: var(--forest); border-color: var(--cream); }
